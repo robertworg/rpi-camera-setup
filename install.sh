@@ -45,4 +45,7 @@ apt-get --yes  install gcc-4.8 g++-4.8
 wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 sudo dpkg -i node_latest_armhf.deb
 
+git clone https://github.com/waveform80/pistreaming.git
+
+printf "\npistreaming cloned to $(pwd)/pistreaming\n"
 printf "\nReboot your PI\n"
