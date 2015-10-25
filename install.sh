@@ -28,8 +28,8 @@ INTERFACES=$(pwd)"/interfaces"
 # create a .new file to write to, then move it to wpa_supplicant folder
 cp $WPA_SUP $WPA_SUP_NEW
 
-[ $(./replace-string-in-file.py -p $WPA_SUP_NEW -fs 'ssid=""' -rs "ssid=\"$SSID\"") ]
-[ $(./replace-string-in-file.py -p $WPA_SUP_NEW -fs 'psk=""' -rs "psk=\"$PSK\"")]
+[ $(./replace-in-file.py -p $WPA_SUP_NEW -fs 'ssid=""' -rs "ssid=\"$SSID\"") ]
+[ $(./replace-in-file.py -p $WPA_SUP_NEW -fs 'psk=""' -rs "psk=\"$PSK\"")]
 
 mv $WPA_SUP_NEW /etc/wpa_supplicant/wpa_supplicant.conf
 
